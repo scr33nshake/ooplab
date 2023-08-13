@@ -171,16 +171,24 @@ public class GradingSystem {
         // Determine the grade based on the marks
         String grade;
 
-        if (marks >= 90) {
+        if (marks >= 80) {
+            grade = "A+";
+        } else if (marks >= 75) {
             grade = "A";
-        } else if (marks >= 80) {
-            grade = "B";
         } else if (marks >= 70) {
-            grade = "C";
+            grade = "A-";
+        } else if (marks >= 65) {
+            grade = "B+";
         } else if (marks >= 60) {
+            grade = "B";
+            } else if (marks >= 55) {
+            grade = "B-";
+            } else if (marks >= 50) {
+            grade = "C+";
+            } else if (marks >= 45) {
+            grade = "C";
+            } else if (marks >= 40) {
             grade = "D";
-        } else if (marks >= 50) {
-            grade = "E";
         } else {
             grade = "F";
         }
@@ -192,6 +200,8 @@ public class GradingSystem {
         scanner.close();
     }
 }
+
+
 
 
 7
