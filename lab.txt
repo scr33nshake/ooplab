@@ -1,0 +1,237 @@
+1
+
+
+
+
+import java.util.Scanner;
+
+public class SumCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int num1 = scanner.nextInt();
+        int num2 = scanner.nextInt();
+        int sum = num1 + num2;
+        System.out.println(sum);
+        scanner.close();
+    }
+}
+
+
+2
+
+
+import java.util.Scanner;
+
+public class CircleAreaCalculator {
+    public static void main(String[] args) {
+        // Create a Scanner object to read input from the user
+        Scanner scanner = new Scanner(System.in);
+
+        // Ask the user to enter the radius of the circle
+        System.out.print("Enter the radius of the circle: ");
+        double radius = scanner.nextDouble();
+
+        // Calculate the area of the circle
+        double area = Math.PI * Math.pow(radius, 2);
+
+        // Display the result
+        System.out.println("The area of the circle with radius " + radius + " is: " + area);
+
+        // Close the scanner
+        scanner.close();
+    }
+}
+
+
+
+3
+
+
+
+import java.util.Scanner;
+
+public class PersonalInfoDisplay {
+    public static void main(String[] args) {
+       
+        Scanner scanner = new Scanner(System.in);
+
+       
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine();
+
+       
+        System.out.print("Enter your age: ");
+        int age = scanner.nextInt();
+
+        System.out.print("Enter your CGPA: ");
+        double cgpa = scanner.nextDouble();
+        scanner.nextLine(); // Consume the newline character left by nextDouble()
+
+        System.out.print("Enter your department: ");
+        String department = scanner.nextLine();
+
+        System.out.print("Enter your section: ");
+        String section = scanner.nextLine();
+
+        System.out.println("\n===== Personal Information =====");
+        System.out.println("\nName: " + name);
+        System.out.println("\nAge: " + age);
+        System.out.println("\nCGPA: " + cgpa);
+        System.out.println("\nDepartment: " + department);
+        System.out.println("\nSection: " + section);
+
+        scanner.close();
+    }
+}
+
+
+
+4
+
+
+
+import java.util.Scanner;
+
+public class EquationSolver {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the value of A: ");
+        int A = scanner.nextInt();
+
+        System.out.print("Enter the value of B: ");
+        int B = scanner.nextInt();
+
+        System.out.print("Enter the value of C: ");
+        int C = scanner.nextInt();
+
+        System.out.print("Enter the value of D: ");
+        int D = scanner.nextInt();
+
+        int resultA = A * B - C * D;
+        System.out.println("\nSolution of Equation - 1 = " + resultA);
+
+        int resultB = 2 * A - B + 3 * D;
+        System.out.println("\nSolution of Equation - 2 = " + resultB);
+
+        int resultC = A * A + B * B - C * C + D * D;
+        System.out.println("\nSolution of Equation - 3 = " + resultC);
+
+        int resultD = (A * A * A) + B - (C * C);
+        System.out.println("\nSolution of Equation - 4 = " + resultD);
+
+        scanner.close();
+    }
+}
+
+5
+
+import java.util.Scanner;
+
+public class MaxValueFinder {
+    public static void main(String[] args) {
+        // Create a Scanner object to read input from the user
+        Scanner scanner = new Scanner(System.in);
+
+        // Ask the user to enter the values of A, B, and C
+        System.out.print("Enter the value of A: ");
+        int A = scanner.nextInt();
+
+        System.out.print("Enter the value of B: ");
+        int B = scanner.nextInt();
+
+        System.out.print("Enter the value of C: ");
+        int C = scanner.nextInt();
+
+        // Find the maximum value among A, B, and C
+        int maxValue = Math.max(A, Math.max(B, C));
+
+        // Display the maximum value
+        System.out.println("Maximum Value = " + maxValue);
+
+        // Close the scanner
+        scanner.close();
+    }
+}
+
+
+6
+
+import java.util.Scanner;
+
+public class GradingSystem {
+    public static void main(String[] args) {
+        // Create a Scanner object to read input from the user
+        Scanner scanner = new Scanner(System.in);
+
+        // Ask the user to enter their obtained marks
+        System.out.print("Enter your obtained marks: ");
+        int marks = scanner.nextInt();
+
+        // Determine the grade based on the marks
+        String grade;
+
+        if (marks >= 90) {
+            grade = "A";
+        } else if (marks >= 80) {
+            grade = "B";
+        } else if (marks >= 70) {
+            grade = "C";
+        } else if (marks >= 60) {
+            grade = "D";
+        } else if (marks >= 50) {
+            grade = "E";
+        } else {
+            grade = "F";
+        }
+
+        // Display the grade
+        System.out.println("Your grade is: " + grade);
+
+        // Close the scanner
+        scanner.close();
+    }
+}
+
+
+7
+
+import java.util.Scanner;
+
+public class CharacterTypeChecker {
+    public static void main(String[] args) {
+        // Create a Scanner object to read input from the user
+        Scanner scanner = new Scanner(System.in);
+
+        // Ask the user to enter a character
+        System.out.print("Enter a character: ");
+        char ch = scanner.next().charAt(0);
+
+        // Check whether it's an alphabet, digit, or special character
+        if (Character.isAlphabetic(ch)) {
+            if (Character.isUpperCase(ch) || Character.isLowerCase(ch)) {
+                // Check whether it's a vowel or consonant
+                if (isVowel(ch)) {
+                    System.out.println(ch + " is a vowel.");
+                } else {
+                    System.out.println(ch + " is a consonant.");
+                }
+            } else {
+                System.out.println(ch + " is a special character.");
+            }
+        } else if (Character.isDigit(ch)) {
+            System.out.println(ch + " is a digit.");
+        } else {
+            System.out.println(ch + " is a special character.");
+        }
+
+        // Close the scanner
+        scanner.close();
+    }
+
+    // Function to check whether a character is a vowel
+    private static boolean isVowel(char ch) {
+        ch = Character.toLowerCase(ch);
+        return ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u';
+    }
+}
