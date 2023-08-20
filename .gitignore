@@ -335,3 +335,104 @@ public class PrimeNumberChecker {
         return true;
     }
 }
+
+week4 2
+
+
+package javaapplication2;
+
+import java.util.Scanner;
+
+class Student {
+    private String name;
+    private int age;
+    private double cgpa;
+    
+
+}
+
+
+public class Studentinfo {
+    
+    public static void main(String[] args) {
+        Scanner scanner =  new Scanner(System.in);
+        
+        System.out.print("Enter the number of students: ");
+        int n = scanner.nextInt();
+        
+        Student[] std = new Student[n];
+        
+        for (int i = 0; i < n; i++) {
+            std[i] = new Student();
+            
+            System.out.print("Enter name for student " + (i + 1) + ": ");
+            scanner.nextLine(); 
+            String name = scanner.nextLine();
+          
+
+            System.out.print("Enter age for student " + (i + 1) + ": ");
+            int age = scanner.nextInt();
+           
+
+            System.out.print("Enter CGPA for student " + (i + 1) + ": ");
+            double cgpa = scanner.nextDouble();
+            
+        }
+        
+        scanner.close();
+    }
+    
+}
+
+week4 1
+
+
+package javaapplication2;
+
+import java.util.Scanner;
+
+class Std{
+
+    String name;
+    int ID;
+    double CGPA;
+
+}
+
+public class Students {
+    
+    
+    public static void main(String[] args) {
+        Scanner scanner =  new Scanner(System.in);
+        
+        Std student1 = new Std();
+        
+        System.out.println("Enter name for student1  ");
+            scanner.nextLine(); 
+            String name = scanner.nextLine();
+          
+
+            System.out.println("Enter ID for student1  ");
+            int ID = scanner.nextInt();
+           
+
+            System.out.println("Enter CGPA for student1  ");
+            double CGPA = scanner.nextDouble();
+        
+        Std student2 = new Std();
+        
+        System.out.println("Enter name for student2  ");
+            scanner.nextLine(); 
+            String name = scanner.nextLine();
+          
+
+            System.out.println("Enter ID for student2  ");
+            int ID = scanner.nextInt();
+           
+
+            System.out.println("Enter CGPA for student2  ");
+            double CGPA = scanner.nextDouble();
+            
+            scanner.close();
+    }
+}
