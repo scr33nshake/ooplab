@@ -436,3 +436,123 @@ public class Students {
             scanner.close();
     }
 }
+
+
+Week 3 Math
+
+//1. Find absolute, floor, ceil, round and square root values of a number.
+
+import java.util.Scanner;
+
+public class MathOperations {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        double number = scanner.nextDouble();
+
+        double absoluteValue = Math.abs(number);
+        System.out.println("Absolute value: " + absoluteValue);
+
+        double floorValue = Math.floor(number);
+        System.out.println("Floor value: " + floorValue);
+
+        double ceilValue = Math.ceil(number);
+        System.out.println("Ceiling value: " + ceilValue);
+
+        long roundedValue = Math.round(number);
+        System.out.println("Rounded value: " + roundedValue);
+
+        double sqrtValue = Math.sqrt(number);
+        System.out.println("Square root value: " + sqrtValue);
+
+        scanner.close();
+    }
+}
+
+//2. Find the maximum and minimum values from three numbers using MATH
+Class.
+
+import java.util.Scanner;
+
+public class MaxMinFinder {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the first number: ");
+        double num1 = scanner.nextDouble();
+
+        System.out.print("Enter the second number: ");
+        double num2 = scanner.nextDouble();
+
+        System.out.print("Enter the third number: ");
+        double num3 = scanner.nextDouble();
+
+        double maxValue = Math.max(num1, Math.max(num2, num3));
+        double minValue = Math.min(num1, Math.min(num2, num3));
+
+        System.out.println("Maximum value: " + maxValue);
+        System.out.println("Minimum value: " + minValue);
+
+        scanner.close();
+    }
+}
+
+
+
+//3. Generate 5 random numbers between 0 and 200.
+
+import java.lang.Math;
+
+public class RandomNumberGenerator {
+
+    public static void main(String[] args) {
+        System.out.println("Generated random numbers between 0 and 200:");
+
+        for (int i = 0; i < 5; i++) {
+            int randomNumber = (int) (Math.random()  * 201); // Generates numbers between 0 (inclusive) and 201 (exclusive)
+            System.out.println(randomNumber);
+        }
+    }
+}
+
+//4. Calculate 2^0 to 2^n Using Math Class. ‘n’ will be input from user.
+
+import java.util.Scanner;
+
+public class PowerOfTwoCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the value of n: ");
+        int n = scanner.nextInt();
+
+        System.out.println("Powers of 2 from 2^0 to 2^" + n + ":");
+        for (int i = 0; i <= n; i++) {
+            double power = Math.pow(2, i);
+            System.out.println("2^" + i + " = " + power);
+        }
+
+        scanner.close();
+    }
+}
+
+
+//5. Calculate the area of a circle using Math.pow() and Math.PI methods
+
+import java.util.Scanner;
+
+public class CircleAreaCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the radius of the circle: ");
+        double radius = scanner.nextDouble();
+
+        double area = Math.PI * Math.pow(radius, 2);
+
+        System.out.println("The area of the circle with radius " + radius + " is: " + area);
+
+        scanner.close();
+    }
+}
